@@ -29,6 +29,9 @@
     <ClInclude Include="CreditCardAccount.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LoyaltyScheme.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CreditOrganizer.cpp">
@@ -41,6 +44,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CreditCardAccount.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LoyaltyScheme.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

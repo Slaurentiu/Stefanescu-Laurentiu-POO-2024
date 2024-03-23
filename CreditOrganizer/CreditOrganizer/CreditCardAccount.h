@@ -1,4 +1,5 @@
 #pragma once
+#include "LoyaltyScheme.h"
 
 ref class CreditCardAccount
 {
@@ -12,14 +13,16 @@ public:
 	static int GetNumberOfAccounts();
 	static CreditCardAccount();
 	literal System::String ^name = "Super Platinum Card";
+	void RedeemLoyaltyPoints();
 
 
 private:
-	long accountNumber;
+	initonly long accountNumber;
 	double currentBalance;
 	double creditLimit;
 	static int numberOfAccounts = 0;
 	static double interestRate;
+	LoyaltyScheme^ scheme; // Handle to a LoyaltyScheme object
 
 
 };

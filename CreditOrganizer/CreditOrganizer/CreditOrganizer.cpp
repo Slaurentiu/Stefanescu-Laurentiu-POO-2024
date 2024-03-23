@@ -49,13 +49,25 @@ int main(array<System::String ^> ^args)
 
 
 
-	int n = CreditCardAccount::GetNumberOfAccounts();
-	Console::Write("Number of account initially:");
-	Console::WriteLine(n);
-	Console::WriteLine("\nCreating first object");
+//	int n = CreditCardAccount::GetNumberOfAccounts();
+//	Console::Write("Number of account initially:");
+//	Console::WriteLine(n);
+//	Console::WriteLine("\nCreating first object");
+//	CreditCardAccount^ account1;
+//	account1 = gcnew CreditCardAccount(12345, 2000);
+
+
+	Console::WriteLine("Creating account object");
 	CreditCardAccount^ account1;
 	account1 = gcnew CreditCardAccount(12345, 2000);
-
+	Console::WriteLine("\nMaking a purchase (300)");
+	account1->MakePurchase(300);
+	Console::WriteLine("\nMaking a purchase (700)");
+	account1->MakePurchase(700);
+	Console::WriteLine("\nMaking a purchase (500)");
+	account1->MakePurchase(500);
+	Console::WriteLine("\nRedeeming points");
+	account1->RedeemLoyaltyPoints();
 
 	return 0;
 }

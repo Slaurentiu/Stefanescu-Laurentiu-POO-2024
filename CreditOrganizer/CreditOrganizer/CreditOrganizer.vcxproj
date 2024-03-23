@@ -127,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CreditCardAccount.h" />
+    <ClInclude Include="LoyaltyScheme.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
   </ItemGroup>
@@ -134,6 +135,7 @@
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="CreditCardAccount.cpp" />
     <ClCompile Include="CreditOrganizer.cpp" />
+    <ClCompile Include="LoyaltyScheme.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
