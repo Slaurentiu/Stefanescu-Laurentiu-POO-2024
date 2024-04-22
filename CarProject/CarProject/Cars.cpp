@@ -4,8 +4,8 @@
 
 using namespace System;
 
-Car::Car(int ID, String^ make, String^ mod, int year, String^ color, double price, double KM, int loc)			//constructor
-	:Id(ID), marca(make), model(mod), an(year), culoare(color), pret(price), km(KM), locuri(loc)				// initializare parametri la crearea obiectului
+Car::Car(String^ make, String^ mod, int year, String^ color, double price, double KM, int loc)			//constructor
+	:marca(make), model(mod), an(year), culoare(color), pret(price), km(KM), locuri(loc)				// initializare parametri la crearea obiectului
 {
 	Console::WriteLine("Am creat o masina noua: " + this->marca + " " + this->model);
 	counter++;
@@ -62,16 +62,11 @@ void Car::BackKm()
 	else
 	{
 		Console::WriteLine("Nu se pot da km inapoi la masina " + this->marca);
-
 	}
 }
 int Car::GetCounter()
 {
 	return counter;
-}
-int Car::GetId()
-{
-	return Id;
 }
 void Car::afisare(List<Car^>^ Lista)
 {
@@ -83,6 +78,7 @@ void Car::afisare(List<Car^>^ Lista)
 		Console::WriteLine(car->GetMarca() + "\t" + car->GetModel() + "\t" + car->GetAn() + "\t" + car->GetCuloare() + "\t" + car->GetPret() + "\t" + car->GetKm() + "\t" + car->GetLocuri());
 	}
 	Console::WriteLine("Avem " + counter + " masini");
+	Console::WriteLine();
 }
 
 int Car::CompareByPret(Car^ a, Car^ b)
@@ -99,13 +95,6 @@ void Car::SortByPret(List<Car^>^ Cars)
 	Cars->Sort(gcnew Comparison<Car^>(CompareByPret));
 	Console::WriteLine();
 	Console::WriteLine("Lista masini ordonate dupa pret:");
-	Console::WriteLine("Marca  Model   An    Culoare    Pret(E)  Km   Locuri ");
-	Console::WriteLine("======================================================");
-	for each (Car ^ car in Cars)
-	{
-		Console::WriteLine(car->GetMarca() + "\t" + car->GetModel() + "\t" + car->GetAn() + "\t" + car->GetCuloare() + "\t" + car->GetPret() + "\t" + car->GetKm() + "\t" + car->GetLocuri());
-	}
-	Console::WriteLine("Avem " + Car::GetCounter() + " masini");
 }
 
 void Car::SortByMarca(List<Car^>^ Cars)
@@ -113,12 +102,5 @@ void Car::SortByMarca(List<Car^>^ Cars)
 	Cars->Sort(gcnew Comparison<Car^>(CompareByMarca));
 	Console::WriteLine();
 	Console::WriteLine("Lista masini ordonate dupa model:");
-	Console::WriteLine("Marca  Model   An    Culoare    Pret(E)  Km   Locuri ");
-	Console::WriteLine("======================================================");
-	for each (Car ^ car in Cars)
-	{
-		Console::WriteLine(car->GetMarca() + "\t" + car->GetModel() + "\t" + car->GetAn() + "\t" + car->GetCuloare() + "\t" + car->GetPret() + "\t" + car->GetKm() + "\t" + car->GetLocuri());
-	}
-	Console::WriteLine("Avem " + Car::GetCounter() + " masini");
 }
 

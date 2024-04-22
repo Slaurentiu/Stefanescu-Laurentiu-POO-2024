@@ -6,7 +6,7 @@ using namespace System::Collections::Generic;									//pentru list
 ref class Car 
 {
 public:
-	Car(int, String^ , String^ , int , String^ , double, double, int );			//constructor
+	Car(String^ , String^ , int , String^ , double, double, int );				//constructor
 	~Car();																		//destructor
 	String^ GetMarca();
 	String^ GetModel();
@@ -18,7 +18,6 @@ public:
 	double GetPret();
 	void SetPret(double);
 	void BackKm();
-	int GetId();
 	static int GetCounter();
 	static void afisare(List<Car^>^ Lista);
 	static int CompareByPret(Car^, Car^);
@@ -27,7 +26,6 @@ public:
 	static void SortByMarca(List<Car^>^ Lista);
 	
 private:
-	int Id;
 	String^ marca;
 	String^ model;
 	int locuri;
