@@ -1,7 +1,12 @@
+//
+//              Proiect realiat de echipa:
+//                    Mirodone Ciprian  - gr.1
+//                    Stefanescu Laurentiu - gr.2
+//                    Nicodim Remus Emil - gr.3
+// 
+//        
 #include "pch.h"
 #include "Cars.h"
-//#include <vector>
-//#include <algorithm>
 
 using namespace System;
 using namespace System::Collections::Generic;
