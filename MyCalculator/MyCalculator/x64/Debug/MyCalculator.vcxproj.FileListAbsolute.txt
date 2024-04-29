@@ -1,0 +1,3 @@
+D:\repos\MyCalculator\MyCalculator\x64\Debug\MyCalculator.vcxproj.AssemblyReference.cache
+D:\repos\MyCalculator\MyCalculator\x64\Debug\MyCalculator.MyForm.resources
+D:\repos\MyCalculator\MyCalculator\x64\Debug\MyCalculator.vcxproj.GenerateResource.cache
